@@ -1,0 +1,353 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.mainSection{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2.9%;
+}
+
+.mainSection header{
+  background: rgb(252, 252, 252);
+  margin-bottom: 3%;
+}
+
+.mainSection header #line{
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  border: 0;
+  opacity: 0.25;
+}
+
+.mainSection header h1{
+  font-size: 1.6em;
+  text-transform: uppercase;
+  margin-bottom: 1%;
+  float: left;
+}
+
+.roomImg{
+  float: left;
+  width: 54%;
+  height: auto;
+  margin-bottom: 2%;
+}
+
+.roomInfo{
+  float: left;
+  width: 41%;
+  height: auto;
+  padding-left: 3%;
+  margin-bottom: 3%;
+}
+
+.roomInfo h2{
+  margin-bottom: 2%;
+  font-size: 1.3em;
+}
+
+.roomInfo p{
+  margin-bottom: 2%;
+}
+
+.roomInfo .info{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.roomInfo .roomPeople{
+  font-style: italic;
+}
+
+.roomInfo .roomPrice{
+  font-weight: bold;
+}
+
+.roomInfo .priceSpan{
+  color: rgb(35, 122, 33);
+  font-size: 1.3em;
+}
+
+.reservation button{
+  display: block;
+  width: 100%;
+  border: 0;
+  background: rgb(41, 34, 95);
+  transition: background 0.5s;
+  text-align: center;
+  font-size: 0.9em;
+  color: #fff;
+  margin-top: 4%;
+  padding: 4%;
+}
+
+.reservation button:hover{
+  background: rgb(212, 168, 83);
+  font-weight: bold;
+  color: #000;
+}
+
+.modal{
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 3%; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modalContent{
+  background-color: #fff;
+  margin: auto;
+  margin-bottom: 7%;
+  padding: 4%;
+  border: 1px solid rgb(136, 136, 136);
+  width: 86%;
+  height: auto;
+}
+
+.close{
+  color: rgb(170, 170, 170);  
+  float: right;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mainForm{
+  margin-top: 4%;
+  margin-bottom: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.mainForm h3{
+  font-size: 1.5em;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+.mainInput{
+  display: block;
+  float: left;
+  width: 50%;
+  height: auto;
+}
+
+.mainInput input{
+  width: 90%;
+  height: auto;
+  display: block;
+  padding: 2%;
+  margin-top: 0.5%;
+  margin-bottom: 3%;
+  margin-right: 3%;
+  border: none;
+  background: rgb(241, 241, 241);
+  font-size: 1em;
+}
+
+.mainInput label{
+  font-size: 1.1em;
+  display: block;
+  width: 70%;
+  height: auto;
+}
+
+.roomInput{
+  display: block;
+  float: left;
+  width: 33%;
+  height: auto;
+}
+
+.roomInput select{
+  width: 93%;
+  height: auto;
+  display: block;
+  padding: 2%;
+  margin-top: 0.5%;
+  margin-bottom: 3%;
+  margin-right: 2%;
+  border: none;
+  background: rgb(241, 241, 241);
+  font-size: 1em;
+}
+
+.roomInput label{
+  font-size: 1.1em;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#extras{
+  display: block;
+  float: none;
+  width: 100%;
+  height: auto;
+}
+
+#extras #mainLbl{
+  font-size: 1.1em;
+  display: inline-block;
+  width: 70%;
+  height: auto;
+  margin-top: 2%;
+  margin-bottom: 1.2%;
+  text-align: left;
+}
+
+.extrasChB{
+  margin-right: 4%;
+  margin-top: 0.5%;
+  margin-bottom: 2%;
+}
+
+#extras input{
+  padding: 3%;
+  margin-right: 0.5%;
+}
+
+#extras label{
+  font-size: 1em;
+  width: 100%;
+  height: auto;
+}
+
+.mainForm p{
+  display: block;
+  float: none;
+  font-size: 0.8em;
+  margin-bottom: 2%;
+}
+
+#btns{
+  width: 98%;
+  height: auto;
+  margin-bottom: 6%;
+}
+
+.modalContent .btn{
+  color: #000;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 1.2%;
+  cursor: pointer;
+  width: 49%;
+  display: block;
+  opacity: 0.8;
+  border: none;
+}
+
+#makeReservation{
+  float: left; 
+  background: rgb(4, 170, 109);
+}
+
+#clear{
+  float: right;
+  background: rgb(213, 227, 222);
+}
+
+.modalContent .btn:hover{
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px){
+
+  body{
+   font-size: 1.1rem;
+  }
+
+  .roomImg{
+    float: none;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .roomInfo{
+    float: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+  }
+
+  .roomInfo .priceSpan{
+    color: rgb(35, 122, 33);
+  }
+
+  .mainForm{
+    margin-top: 4%;
+    margin-bottom: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  .mainForm h3{
+    margin-bottom: 2%;
+    text-align: center;
+  }
+
+  .mainInput, .roomInput{
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .mainInput input, .roomInput input, .roomInput select{
+    width: 90%;
+    padding: 3%;
+  }
+
+  .mainForm p{
+    display: block;
+    margin-top: 4%;
+    margin-bottom: 6%;
+  }
+
+  #btns{
+    float: none;
+  }
+
+  .modalContent .btn{
+    width: 100%;
+    height: auto;
+    margin-bottom: 4%;
+    padding: 2.5%;
+  }
+
+  #makeReservation{
+    float: none; 
+  }
+
+  #clear{
+    float: none;
+  }
+}
+
+@media screen and (max-width: 480px){
+  body{
+    font-size: 1rem;
+  }
+}
+
+
+
+
+

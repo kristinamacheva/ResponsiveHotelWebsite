@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Kristina Macheva">
+	<title>Настаняване</title>
+	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS/accommodation_styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<figure>
+				<img src="images/logo1.png" alt="logo">
+			</figure>
+			<p>Residence City Garden</p>
+		</div>
+		<nav class="mainNav" id="myMainNav">
+			<ul>
+				<li>
+					<a href="index.html">За нас</a>
+				</li>
+				<li>
+					<a href="accommodation.html">Настаняване</a>
+				</li>
+				<li>
+					<a href="contacts.html">Контакти</a>
+				</li>
+				<li>
+					<a href="gallery.html">Галерия</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+					</a>
+				</li>	
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="mainSection">
+			<header>	
+				<h1>Настаняване</h1>
+				<hr id="line">
+			</header>
+			<article class="rooms" id="twoRoom">
+				<figure>
+					<img src="images/twoRoom.jpg" alt="room for two" class="roomImg">
+				</figure>
+				<div class="roomInfo">
+					<h2>Двойна стая</h2>
+					<p class="info">
+						Хотел „Резиденс Сити Гардън“ разполага с просторни стаи с една спалня. Стаите са с изключително стилен и удобен дизайн, който ще ви предразположи към пълен релакс и качествена почивка. Стилният комфорт и уют дават усещането за луксозна атмосфера. Всички стаи на хотела са оборудвани с: вана/душ кабина в банята, сешоар, централна климатизация, мини - бар, смарт телевизор с кабелна телевизия, телефон, Wi-Fi със свободен достъп.
+					</p>
+					<p class="roomPeople">
+						Подходящ за настаняване на двама възрастни.
+					</p>
+					<p class="roomPrice">
+						Цена: <span class="priceSpan">260 лв.</span> (1 нощувка, без включени екстри)
+					</p>
+					<div class="reservation">
+  						<button onclick="openModalForm()">Направи резервация</button>
+  					</div>
+				</div>
+			</article>
+			<article class="rooms" id="studio">
+				<figure>
+					<img src="images/studio.jpg" alt="studio" class="roomImg">
+				</figure>
+				<div class="roomInfo">
+					<h2>Студио</h2>
+					<p class="info">
+						Разпуснете в студиото, което е елегантно аранжирано в минималистичен стил. Наспете се добре в удобната спалня, и се възползвайте от практичните допълнителни услуги на хотела. Студиото е оборудвано с всички необходими удобства за пълноценно преживяване. Релаксиращата атмосфера в елегантен стил, както и фино декорираното пространство ще ви доставят истинско удоволствие и приятна почивка!
+					</p>
+					<p class="roomPeople">
+						Подходящ за настаняване на двама възрастни с дете.
+					</p>
+					<p class="roomPrice">
+						Цена: <span class="priceSpan">309 лв.</span> (1 нощувка, без включени екстри)
+					</p>
+					<div class="reservation">
+  						<button onclick="openModalForm()">Направи резервация</button>
+  					</div>
+				</div>
+			</article>
+			<article class="rooms" id="apartment">
+				<figure>
+					<img src="images/apartment.jpg" alt="apartment" class="roomImg">
+				</figure>
+				<div class="roomInfo">
+					<h2>Апартамент</h2>
+					<p class="info">
+						Ако имате нужда от повече пространство, или идвате със семейството си, Хотел „Резиденс Сити Гардън“ разполага с 1 апартамент с една спалня, голяма трапезария с кухненски бокс и всекиднедна стая с разтегателен диван. Стилният комфорт и уют дават усещането за луксозна атмосфера, а апартаментът е оборудван с всички необходими удобства за пълноценна почивка и преживяване. Релаксиращият амбианс, както и пространствената щедрост на стилното пространство са предназначени само за ценители!
+					</p>
+					<p class="roomPeople">
+						Подходящ за настаняване на двама възрастни с две деца или трима с дете.
+					</p>
+					<p class="roomPrice">
+						Цена: <span class="priceSpan">456 лв.</span> (1 нощувка, без включени екстри)
+					</p>
+					<div class="reservation">
+						<button onclick="openModalForm()">Направи резервация</button>
+  					</div>
+				</div>
+			</article>
+		</section>
+		<div id="modalForm" class="modal">
+  			<div class="modalContent">
+    			<span class="close">&times;</span>
+    			<form name="formReserve" class="mainForm" method="post" action="#" onsubmit="return validateForm()">
+    				<h3>Резервация</h3>
+					<div class="mainInput">
+						<label for="fname">Име <span class="req">*</span></label>
+  						<input type="text" id="fname" name="fname" placeholder="напр. Иван">
+					</div>
+					<div class="mainInput">
+						<label for="lname">Фамилия <span class="req">*</span></label>
+  						<input type="text" id="lname" name="lname" placeholder="напр. Иванов">
+  						<div class="error" id="fnameErr"></div>
+					</div>
+					<div class="mainInput">
+  						<label for="phoneNumber">Телефон <span class="req">*</span></label>
+  						<input type="text" id="phoneNumber" name="phoneNumber" placeholder="08xx-xxx-xxx">
+  					</div>
+  					<div class="mainInput">
+  						<label for="id">ЕГН <span class="req">*</span></label>
+  						<input type="password" id="id" name="id">
+  					</div>
+  					<div class="mainInput">
+  						<label for="email">E-mail <span class="req">*</span></label>
+  						<input type="email" id="email" name="email" placeholder="example@domain.com">
+  					</div>
+  					<div class="mainInput">
+  						<label for="address">Адрес</label>
+  						<input type="text" id="address" name="address">
+  					</div>
+  					<div class="mainInput">
+  						<label for="accommodationDate">Дата на настаняване <span class="req">*</span></label>
+        				<input id="accommodationDate" name="accommodationDate" type="date">
+        			</div>
+        			<div class="mainInput">
+  						<label for="departDate">Дата на напускане <span class="req">*</span></label>
+        				<input id="departDate" name="departDate" type="date">
+        			</div>
+            		<div class="roomInput">
+        				<label for="roomType">Вид стая <span class="req">*</span></label>
+        				<select id="roomType" name="roomType" class="roomTypes">
+        					<option value="selectRoomType">Изберете вид на стаята</option>
+            				<option value="doubleRoom">Двойна стая</option>
+            				<option value="studio">Студио</option>
+            				<option value="apartment">Апартамент</option>
+        				</select>
+        			</div>
+        			<div class="roomInput">
+        				<label for="adult">Възрастни <span id="req">*</span></label>
+        				<select id="adult" name="adult">
+        					<option value="selectAdult">Изберете брой възрастни</option>
+            				<option value="one">1</option>
+            				<option value="two">2</option>
+            				<option value="three">3</option>
+            				<option value="four">4</option>
+        				</select>
+        			</div>
+        			<div class="roomInput">
+        				<label for="child">Деца <span class="req">*</span></label>
+            			<select id="child" name="child">
+        					<option value="selectChild">Изберете брой деца</option>
+        					<option value="zero">0</option>
+            				<option value="one">1</option>
+            				<option value="two">2</option>
+            				<option value="three">3</option>
+            				<option value="four">4</option>
+        				</select>
+        			</div>
+        			<div id="extras">
+        				<label id="mainLbl">Екстри</label>
+        				<div class="extrasChB">
+        					<input type="checkbox" id="breakfast" name="breakfast">
+        					<label for="breakfast">Закуска</label> 
+        				</div>
+        				<div class="extrasChB">
+        					<input type="checkbox" id="lunch" name="lunch">
+        					<label for="lunch">Обяд</label> 
+        				</div>
+        				<div class="extrasChB">
+        					<input type="checkbox" id="dinner" name="dinner">
+        					<label for="dinner">Вечеря</label> 
+        				</div>
+        				<div class="extrasChB">
+        					<input type="checkbox" id="view" name="view">
+        					<label for="view">Изглед към парка</label> 
+        				</div>
+        				<div class="extrasChB">
+        					<input type="checkbox" id="safe" name="safe">
+        					<label for="safe">Сейф</label> 
+        				</div>
+        				<div class="extrasChB">
+        					<input type="checkbox" id="coffee" name="coffee">
+        					<label for="coffee">Кафе машина</label> 
+        				</div>
+        			</div>
+        			<p>
+    					Всички полета със * са задължителни.
+    				</p>
+    				<div id="btns">
+    					<button type="submit" class="btn" id="makeReservation">Резервирай</button>
+    					<button type="reset" class="btn" id="clear">Изчисти</button>
+    				</div>
+				</form>
+  			</div>
+		</div>
+	</main>
+	<footer class="mainFooterHotel">
+		<div class="mainInfoFooter">
+			<h4>Residence City Garden</h4>
+			<p>
+				Хотел „Резиденс Сити Гардън“ е перфектния избор за почивка по всяко време на годината. Магията на Пеещите фонтани и зеленината в парка са на една ръка разстояние от нашия красив бутиков хотел – подходящ за индивидуална и семейна ваканция, бизнес пътуване, или туристическа обиколка.
+			</p>
+		</div>
+		<nav class="footerNav" id="myFooterNav">
+			<h4>Меню</h4>
+			<ul>
+				<li>
+					<a href="index.html">За нас</a>
+				</li>
+				<li>
+					<a href="accommodation.html">Настаняване</a>
+				</li>
+				<li>
+					<a href="contacts.html">Контакти</a>
+				</li>
+				<li>
+					<a href="gallery.html">Галерия</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="contactsFooter">
+			<h4>Контакти</h4>
+			<div class="textContactsFooter">
+				<h5>Адрес</h5>
+				<p>
+					гр. Пловдив ул. Велико Търново 19
+				</p>
+			</div>
+			<div class="textContactsFooter">
+				<h5>Телефон</h5>
+				<p>
+					032/333840, +359 88 6776000
+				</p>
+			</div>
+			<div class="textContactsFooter">
+				<h5>Имейл</h5>
+				<p>
+					reservation@rsg.com
+				</p>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>
+				© Copyright 2021 by Kristina Macheva
+			</p>
+		</div>
+	</footer>
+	<script src="JavaScript/scripts.js"></script>
+	<script src="JavaScript/accommodation_scripts.js"></script>
+	<script src="JavaScript/formValidation_scripts.js"></script>
+</body>
+</html>

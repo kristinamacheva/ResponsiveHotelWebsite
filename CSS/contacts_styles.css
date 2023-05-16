@@ -1,0 +1,137 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.contactsHeader{
+  background: rgb(252, 252, 252);
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.contactsHeader #line{
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  border: 0;
+  opacity: 0.25;
+}
+
+.contactsHeader h1{
+  font-size: 1.6em;
+  text-transform: uppercase;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  float: left;
+}
+
+.hotelImg{
+  display: block;
+  float: left;
+  margin-top: 2.8%;
+  margin-left: 5%;
+  margin-bottom: 2%;
+  width: 50%;
+  height: auto;
+}
+
+.hotelImg img{
+  width: 100%;
+  height: auto;
+}
+
+.contactInfo{
+  display: block;
+  margin-left: 3%;
+  margin-right: 5%;
+  margin-top: 2.8%;
+  margin-bottom: 2%;
+  padding: 2%;
+  float: left;
+  width: 33%;
+  height: auto;
+  background: rgb(246, 246, 246); 
+}
+
+.contacts{
+  display: block;
+  float: left;
+  margin-bottom: 4%;
+}
+
+.iconCont{
+  display: block;
+  float: left;
+  width: 13%;
+  height: auto;
+  padding-right: 4%;
+}
+
+.textContacts{
+  float: left;
+  width: 73%;
+}
+
+.textContacts h3{
+  font-size: 1.1em;
+  margin-bottom: 1%;
+}
+
+.hotelMap{
+  clear: both;
+  display: block;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 4%;
+}
+
+#map{
+  width: 100%;
+  border:0;
+}
+
+@media screen and (max-width: 768px){
+
+  body{
+   font-size: 1.1rem;
+  }
+
+  .hotelImg{
+    width: 90%;
+    height: auto;
+    float: none;
+  }
+
+  .contactInfo{
+    width: 90%;
+    height: auto;
+    float: none;
+    background: initial;
+  }
+
+  .contacts{
+    float: none;
+  }
+
+  .textContacts h3{
+    margin-bottom: 0.3%;
+  }
+
+  .iconCont{
+    width: 7%;
+    height: auto;
+  }
+
+  .textContacts{
+    width: 89%;
+    height: auto;
+    margin-bottom: 4%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  body{
+    font-size: 1rem;
+  }
+}
